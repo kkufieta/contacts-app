@@ -1,7 +1,6 @@
 import React from 'react';
 
 class ListContacts extends React.Component {
-
     render() {
         return (
             <ol className='contact-list'>
@@ -17,7 +16,9 @@ class ListContacts extends React.Component {
                             <p>{contact.name}</p>
                             <p>{contact.handle}</p>
                         </div>
-                        <button className='contact-remove'>
+                        <button
+                            className='contact-remove'
+                            onClick={() => (this.props.onDeleteContact(contact))}>
 
                         </button>
                     </li>
